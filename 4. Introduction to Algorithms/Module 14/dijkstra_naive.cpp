@@ -1,3 +1,5 @@
+// Time Complexity: O(N x E)
+
 #include <bits/stdc++.h>
 using namespace std;
 const int N = 1e5 + 5;
