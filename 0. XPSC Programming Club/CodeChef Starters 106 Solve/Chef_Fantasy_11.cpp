@@ -6,9 +6,10 @@ int main()
     cin >> t;
     while (t--)
     {
-        long long n;
+        int n;
         cin >> n;
-        cout << ((n & (n - 1)) == 0 ? "NO" : "YES") << endl;
+        int ans = n * (n - 1);
+        cout << ans << endl;
     }
     return 0;
 }

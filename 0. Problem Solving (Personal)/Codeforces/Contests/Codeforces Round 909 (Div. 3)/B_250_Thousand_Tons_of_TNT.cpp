@@ -2,7 +2,7 @@
 using namespace std;
 int main()
 {
-    long long t;
+    int t;
     cin >> t;
     while (t--)
     {
@@ -26,7 +26,7 @@ int main()
             {
                 if (n % i == 0)
                 {
-                    long long sum = 0, mx = INT_MIN, mn = INT_MAX;
+                    long long sum = 0, mx = LLONG_MIN, mn = LLONG_MAX;
                     for (long long j = 1; j <= n; j++)
                     {
                         sum += arr[j - 1];

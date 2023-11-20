@@ -4,25 +4,25 @@ int main()
 {
     int n;
     cin >> n;
-    int arr[n];
+    int a[n];
     for (int i = 0; i < n; i++)
-    {
-        cin >> arr[i];
-    }
+        cin >> a[i];
     int k;
     cin >> k;
 
-    int i = 0, j = 0, sum = 0;
+    int i = 0, j = 0, s = 0;
+    int mx = INT_MIN;
     while (j < n)
     {
-        sum += arr[j];
+        s += a[j];
         if (j >= k - 1)
         {
-            // cout << sum << endl;
-            // sum -= arr[i];
+            mx = max(mx, s);
+            s -= a[i];
             i++;
         }
         j++;
     }
+    cout << mx << endl;
     return 0;
 }

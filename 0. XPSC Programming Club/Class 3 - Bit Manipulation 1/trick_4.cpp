@@ -1,7 +1,4 @@
-// Count set bit
-
-//    - 8 4 2 1
-// 11 = 1 0 1 1
+// count set bit
 
 #include <bits/stdc++.h>
 using namespace std;
@@ -9,15 +6,12 @@ int main()
 {
     int n;
     cin >> n;
-
     int ans = 0;
     while (n > 0)
     {
         ans += n & 1;
-        n >>= 1;
+        n = n >> 1;
     }
-
     cout << ans << endl;
-
     return 0;
 }
