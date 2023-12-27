@@ -6,9 +6,9 @@ int main()
     cin >> t;
     while (t--)
     {
-        double x, y;
-        cin >> x >> y;
-        cout << (y >= x ? 1 : max((x - 2 * y), ceil(x / (y + 1)))) << endl;
+        int x, y, z;
+        cin >> x >> y >> z;
+        cout << z / (x * y * 2) << endl;
     }
     return 0;
 }
