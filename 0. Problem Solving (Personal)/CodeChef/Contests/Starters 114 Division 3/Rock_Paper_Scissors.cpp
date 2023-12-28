@@ -10,30 +10,38 @@ int main()
         string s;
         cin >> n >> s;
 
-        string ss = s;
-        sort(ss.begin(), ss.end());
-
+        int count = 0;
+        vector<char> v(n, 'P');
         for (int i = 0; i < n; i++)
         {
-            if (ss[i] == s[i] && s != ss)
+            if (s[i] == 'R' && v[i] == 'P')
             {
-                cout << 'P';
+                count++;
             }
-            else
+        }
+
+        if (count < ((n / 2) + 1))
+        {
+            int chk;
+            chk = ((n / 2) + 1) - count;
+            for (int i = n - 1; i >= 0; i--)
             {
-                if (ss[i] == 'S')
+                if (chk > 0 && s[i] == 'P')
                 {
-                    cout << 'R';
+                    v[i] = 'S';
+                    chk--;
                 }
-                else if (ss[i] == 'P')
+                else if (chk > 0 && s[i] == 'S')
                 {
-                    cout << 'S';
-                }
-                else if (ss[i] == 'R')
-                {
-                    cout << 'P';
+                    v[i] = 'R';
+                    chk--;
                 }
             }
+        }
+
+        for (auto x : v)
+        {
+            cout << x;
         }
         cout << endl;
     }
