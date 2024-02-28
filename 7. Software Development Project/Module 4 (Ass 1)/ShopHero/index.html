@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shop Hero</title>
+    <link rel="icon" type="image/x-icon" href="./resources/favicon.png" />
+    <!-- TailwindCSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- DaisyUI -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- Montserrat font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Montserrat", sans-serif;
+        font-optical-sizing: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <nav
+      class="bg-[#1A187A] py-4 px-10 lg:px-56 grid grid-cols-2 lg:grid-cols-3 items-center"
+    >
+      <div>
+        <img class="w-2/3 lg:w-1/2" src="resources/Group 2.png" alt="Logo" />
+      </div>
+      <div class="hidden lg:block">
+        <label class="input input-bordered flex items-center gap-2">
+          <input type="text" class="grow" placeholder="Search" />
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 16 16"
+            fill="currentColor"
+            class="w-4 h-4 opacity-70 cursor-pointer"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z"
+              clip-rule="evenodd"
+            />
+          </svg>
+        </label>
+      </div>
+      <div
+        class="hidden lg:flex text-gray-400 font-semibold px-5 justify-around"
+      >
+        <p class="text-white cursor-pointer">Home</p>
+        <p class="cursor-pointer">About</p>
+        <p class="cursor-pointer">Contact Us</p>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="2"
+          class="w-6 h-6 stroke-white cursor-pointer"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z"
+          />
+        </svg>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="2"
+          class="w-6 h-6 stroke-white cursor-pointer"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z"
+          />
+        </svg>
+      </div>
+      <div class="flex lg:hidden justify-end">
+        <div class="dropdown dropdown-bottom dropdown-end">
+          <div tabindex="0" role="button" class="m-1">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="2.5"
+              class="w-6 h-6 stroke-white cursor-pointer"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+              />
+            </svg>
+          </div>
+          <ul
+            tabindex="0"
+            class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded w-52"
+          >
+            <li>
+              <label class="input input-bordered flex items-center gap-2">
+                <input type="text" class="grow w-full" placeholder="Search" />
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 16 16"
+                  fill="currentColor"
+                  class="w-4 h-4 opacity-70 cursor-pointer"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </label>
+            </li>
+            <li>&nbsp;</li>
+            <li><a>Home</a></li>
+            <li><a>About</a></li>
+            <li><a>Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <section>
+      <div class="carousel w-full h-[92vh]">
+        <div
+          id="slide1"
+          class="carousel-item relative w-full"
+          style="
+            background: url(./resources/slider-bg.png) center/cover no-repeat;
+          "
+        >
+          <div
+            class="grid grid-cols-1 lg:grid-cols-2 px-5 lg:px-40 pt-10 lg:pt-0 w-full items-center overflow-hidden"
+          >
+            <div>
+              <p class="text-[#1E046A] lg:text-2xl text-center lg:text-left">
+                Pro. Beyond.
+              </p>
+              <h1
+                class="text-[2.5rem] lg:text-[7rem] -ml-3 text-center lg:text-left"
+              >
+                Iphone <span class="font-semibold">14 Pro</span>
+              </h1>
+              <p
+                class="text-xs mt-1 lg:mt-0 lg:text-xl text-center lg:text-left"
+              >
+                Created to change everything for better. For everyone
+              </p>
+              <button
+                class="hidden lg:block mt-5 px-12 py-3 bg-[#171495] text-white rounded-lg"
+              >
+                Shop Now
+              </button>
+            </div>
+            <div class="h-full flex justify-center lg:justify-end items-end">
+              <img
+                class="w-2/3"
+                src="./resources/Iphone Image 1.png"
+                alt="slider 1"
+              />
+            </div>
+          </div>
+          <div
+            class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+          >
+            <a href="#slide3" class="btn btn-circle">❮</a>
+            <a href="#slide2" class="btn btn-circle">❯</a>
+          </div>
+        </div>
+
+        <div
+          id="slide2"
+          class="carousel-item relative w-full"
+          style="
+            background: url(./resources/slider-bg.png) center/cover no-repeat;
+          "
+        >
+          <div
+            class="grid grid-cols-1 lg:grid-cols-2 px-5 lg:px-40 pt-10 lg:pt-0 w-full items-center overflow-hidden"
+          >
+            <div>
+              <p class="text-[#1E046A] lg:text-2xl text-center lg:text-left">
+                Smarter. Brighter. Mightier.
+              </p>
+              <h1
+                class="text-[2.5rem] lg:text-[7rem] -ml-3 text-center lg:text-left"
+              >
+                Apple Watch <br /><span class="font-semibold">Series 9</span>
+              </h1>
+              <p
+                class="text-xs mt-1 lg:mt-0 lg:text-xl text-center lg:text-left"
+              >
+                A powerful move forward.
+              </p>
+              <button
+                class="hidden lg:block mt-5 px-12 py-3 bg-[#171495] text-white rounded-lg"
+              >
+                Shop Now
+              </button>
+            </div>
+            <div
+              class="h-full flex justify-center lg:justify-end items-end lg:items-center"
+            >
+              <img
+                class="w-2/3"
+                src="./resources/Iphone 14 pro 1-1.png"
+                alt="slider 2"
+              />
+            </div>
+          </div>
+          <div
+            class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+          >
+            <a href="#slide1" class="btn btn-circle">❮</a>
+            <a href="#slide3" class="btn btn-circle">❯</a>
+          </div>
+        </div>
+
+        <div
+          id="slide3"
+          class="carousel-item relative w-full"
+          style="
+            background: url(./resources/slider-bg.png) center/cover no-repeat;
+          "
+        >
+          <div
+            class="grid grid-cols-1 lg:grid-cols-2 px-5 lg:px-40 pt-10 lg:pt-0 w-full items-center overflow-hidden"
+          >
+            <div>
+              <p class="text-[#1E046A] lg:text-2xl text-center lg:text-left">
+                Sounds like an epiphany
+              </p>
+              <h1
+                class="text-[2.5rem] lg:text-[7rem] -ml-3 text-center lg:text-left"
+              >
+                Apple <br /><span class="font-semibold">AirPods Max</span>
+              </h1>
+              <p
+                class="text-xs mt-1 lg:mt-0 lg:text-xl text-center lg:text-left"
+              >
+                A radically original composition
+              </p>
+              <button
+                class="hidden lg:block mt-5 px-12 py-3 bg-[#171495] text-white rounded-lg"
+              >
+                Shop Now
+              </button>
+            </div>
+            <div
+              class="h-full flex justify-center lg:justify-end items-end lg:items-center"
+            >
+              <img
+                class="w-2/3"
+                src="./resources/Iphone 14 pro 1.png"
+                alt="slider 3"
+              />
+            </div>
+          </div>
+          <div
+            class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+          >
+            <a href="#slide2" class="btn btn-circle">❮</a>
+            <a href="#slide1" class="btn btn-circle">❯</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section></section>
+
+    <section></section>
+
+    <section></section>
+
+    <footer></footer>
+
+    <!-- DaisyUI -->
+    <script src="https://cdn.tailwindcss.com"></script>
+  </body>
+</html>
